@@ -9,5 +9,5 @@ export default function () {
     return null;
   }
 
-  return <WebsiteDetailsPage websiteId={id} />;
+  return <WebsiteDetailsPage websiteId={id} hideCategory={true} />;
 }

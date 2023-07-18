@@ -10,7 +10,7 @@ import { useWebsite } from 'hooks';
 import WebsiteHeader from './WebsiteHeader';
 import { WebsiteMetricsBar } from './WebsiteMetricsBar';
 
-export default function WebsiteDetailsPage({ websiteId }) {
+export default function WebsiteDetailsPage({ websiteId, hideCategory }) {
   const { data: website, isLoading, error } = useWebsite(websiteId);
   const { pathname } = useRouter();
   const showLinks = !pathname.includes('/share/');
@@ -21,7 +21,7 @@ export default function WebsiteDetailsPage({ websiteId }) {
 
   return (
     <Page loading={isLoading} error={error}>
-      <WebsiteHeader websiteId={websiteId} showLinks={showLinks} />
+      <WebsiteHeader websiteId={websiteId} showLinks={showLinks && !hideCategory} />
       <WebsiteMetricsBar websiteId={websiteId} sticky={true} />
       <WebsiteChart websiteId={websiteId} />
       <FilterTags
