@@ -8,17 +8,12 @@ const contentSecurityPolicy = `
   script-src 'self' 'unsafe-eval';
   style-src 'self' 'unsafe-inline';
   connect-src 'self' api.umami.is;
-  frame-ancestors 'self' ${process.env.ALLOWED_FRAME_URLS};
 `;
 
 const headers = [
   {
     key: 'X-DNS-Prefetch-Control',
     value: 'on',
-  },
-  {
-    key: 'Content-Security-Policy',
-    value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
   },
 ];
 
