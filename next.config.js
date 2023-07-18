@@ -17,10 +17,6 @@ const headers = [
     value: 'on',
   },
   {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN',
-  },
-  {
     key: 'Content-Security-Policy',
     value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
   },
