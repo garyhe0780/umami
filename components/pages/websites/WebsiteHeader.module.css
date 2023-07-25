@@ -13,7 +13,8 @@
   font-weight: 700;
   overflow: hidden;
   height: 100px;
-  width: 100%;
+  width: 100% !important;
+  flex: 1 auto !important;
   justify-content: center;
 }
 
