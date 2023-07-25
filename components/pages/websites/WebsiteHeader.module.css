@@ -13,6 +13,8 @@
   font-weight: 700;
   overflow: hidden;
   height: 100px;
+  width: 100%;
+  justify-content: center;
 }
 
 .actions {

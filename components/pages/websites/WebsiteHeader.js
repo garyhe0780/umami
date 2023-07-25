@@ -42,7 +42,7 @@ export function WebsiteHeader({ websiteId, showLinks = true, children }) {
         <Text>{name}</Text>
       </Column>
       <Column className={styles.actions} variant="two">
-        <ActiveUsers websiteId={websiteId} />
+        {showLinks && <ActiveUsers websiteId={websiteId} />}
         {showLinks && (
           <Flexbox alignItems="center">
             {links.map(({ label, icon, path }) => {
