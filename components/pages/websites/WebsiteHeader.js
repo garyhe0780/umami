@@ -38,7 +38,7 @@ export function WebsiteHeader({ websiteId, showLinks = true, children }) {
 
   return (
     <Row className={styles.header} justifyContent="center">
-      <Column className={styles.title}>
+      <Column className={styles.title} style="flex: 1 auto !important;">
         <Text>{name}</Text>
       </Column>
       <Column className={styles.actions} variant="two">
