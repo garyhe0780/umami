@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { Flexbox, Row, Column, Text, Button, Icon } from 'react-basics';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Favicon from 'components/common/Favicon';
 import ActiveUsers from 'components/metrics/ActiveUsers';
 import styles from './WebsiteHeader.module.css';
 import Icons from 'components/icons';
@@ -39,8 +38,7 @@ export function WebsiteHeader({ websiteId, showLinks = true, children }) {
 
   return (
     <Row className={styles.header} justifyContent="center">
-      <Column className={styles.title} variant="two">
-        <Favicon domain={domain} />
+      <Column className={styles.title}>
         <Text>{name}</Text>
       </Column>
       <Column className={styles.actions} variant="two">
