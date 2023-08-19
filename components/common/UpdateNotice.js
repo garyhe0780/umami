@@ -36,19 +36,7 @@ export function UpdateNotice() {
     return null;
   }
 
-  return (
-    <Row className={styles.notice}>
-      <Column variant="two" className={styles.message}>
-        {formatMessage(messages.newVersionAvailable, { version: `v${latest}` })}
-      </Column>
-      <Column className={styles.buttons}>
-        <Button variant="primary" onClick={handleViewClick}>
-          {formatMessage(labels.viewDetails)}
-        </Button>
-        <Button onClick={handleDismissClick}>{formatMessage(labels.dismiss)}</Button>
-      </Column>
-    </Row>
-  );
+  return <></>;
 }
 
 export default UpdateNotice;
