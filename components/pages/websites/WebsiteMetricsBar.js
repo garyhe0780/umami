@@ -72,6 +72,7 @@ export function WebsiteMetricsBar({ websiteId, sticky }) {
                 value={uniques.value}
                 change={uniques.change}
               />
+              {/*
               <MetricCard
                 className={styles.card}
                 label={formatMessage(labels.bounceRate)}
@@ -85,6 +86,7 @@ export function WebsiteMetricsBar({ websiteId, sticky }) {
                 format={n => Number(n).toFixed(0) + '%'}
                 reverseColors
               />
+              */}
               <MetricCard
                 className={styles.card}
                 label={formatMessage(labels.averageVisitTime)}
